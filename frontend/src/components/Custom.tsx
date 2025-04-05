@@ -7,6 +7,7 @@ import { Calendar } from "@/components/ui/calendar";
 import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
 import { format } from 'date-fns';
+import { Navbar } from './Navbar';
 
 
 const RequestCustomItineraryPage = () => {
@@ -42,7 +43,7 @@ const RequestCustomItineraryPage = () => {
 
     try {
       // Replace '/api/custom-itinerary-request' with your actual backend endpoint
-      const response = await fetch('http://localhost:5000/api/custom-itinerary-request', {
+      const response = await fetch('https://artisanjourneys.onrender.com/api/custom-itinerary-request', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -73,6 +74,8 @@ const RequestCustomItineraryPage = () => {
   };
 
   return (
+    <>
+    <Navbar />
     <section className="container py-24 sm:py-32">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24 items-stretch">
         {/* Left Side: Image */}
@@ -237,6 +240,7 @@ const RequestCustomItineraryPage = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

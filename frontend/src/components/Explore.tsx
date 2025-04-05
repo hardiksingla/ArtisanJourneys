@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogClose } from "@/components/ui/dialog";
+import { Navbar } from './Navbar';
 
 interface Experience {
   id: string;
@@ -22,7 +23,7 @@ const ExploreExperiencesPage = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await fetch('http://localhost:5000/api/experiences'); // Adjust URL if needed
+        const response = await fetch('https://artisanjourneys.onrender.com/api/experiences'); // Adjust URL if needed
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
@@ -45,6 +46,8 @@ const ExploreExperiencesPage = () => {
 
 
   return (
+    <>
+    <Navbar />
     <section className="container py-24 sm:py-32">
       <h1 className="text-3xl md:text-4xl font-bold mb-8 text-center">
         Explore Our Unique Experiences
@@ -125,6 +128,7 @@ const ExploreExperiencesPage = () => {
         </DialogContent>
       </Dialog>
     </section>
+    </>
   );
 };
 
