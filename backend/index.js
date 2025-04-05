@@ -8,8 +8,6 @@ const bodyParser = require('body-parser');
 require('dotenv').config();
 
 const mongoURI = process.env.MONGODB_URI;
-console.log("dasfbhikc")
-console.log(path.join(__dirname, 'build', 'index.html'))
 
 
 mongoose.connect(mongoURI)

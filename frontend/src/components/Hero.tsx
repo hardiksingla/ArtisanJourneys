@@ -1,7 +1,7 @@
 import { Button } from "./ui/button";
 import { buttonVariants } from "./ui/button";
 import { HeroCards } from "./HeroCards";
-import { GlobeIcon } from "@radix-ui/react-icons"; // Changed icon to something travel-related
+import { GlobeIcon } from "@radix-ui/react-icons";
 
 export const Hero = () => {
   return (
@@ -31,27 +31,24 @@ export const Hero = () => {
         <div className="space-y-4 md:space-y-0 md:space-x-4">
           <a href="custom"><Button className="w-full md:w-1/3">Request Your Custom Itinerary</Button></a>
 
-          {/* You might want to change this link to your contact or services page */}
           <a
             rel="noreferrer noopener"
-            href="explore" // Replace with your actual link
+            href="explore"
             target="_blank"
             className={`w-full md:w-1/3 ${buttonVariants({
               variant: "outline",
             })}`}
           >
             Explore Our Experiences
-            <GlobeIcon className="ml-2 w-5 h-5" /> {/* Updated icon */}
+            <GlobeIcon className="ml-2 w-5 h-5" />
           </a>
         </div>
       </div>
 
-      {/* Hero cards sections - You'll need to update the content within HeroCards.js as well */}
       <div className="z-10">
         <HeroCards />
       </div>
 
-      {/* Shadow effect */}
       <div className="shadow"></div>
     </section>
   );

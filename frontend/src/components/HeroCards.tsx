@@ -13,11 +13,9 @@ import { LightBulbIcon } from "./Icons";
 export const HeroCards = () => {
   return (
     <div className="hidden lg:flex flex-row flex-wrap gap-8 relative w-[700px] h-[500px]">
-      {/* Adventure Experience */}
       <Card className="absolute w-[340px] -top-[40px] drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="flex flex-row items-center gap-4 pb-2">
           <div className="bg-orange-200 text-orange-700 rounded-full p-2">
-            {/* Placeholder for Adventure Icon */}
             <LightBulbIcon />
           </div>
 
@@ -33,7 +31,6 @@ export const HeroCards = () => {
         </CardContent>
       </Card>
 
-      {/* Cultural Immersion */}
       <Card className="absolute right-[20px] top-2 w-80 flex flex-col justify-center items-center drop-shadow-xl shadow-black/10 dark:shadow-white/10">
         <CardHeader className="mt-8 flex justify-center items-center pb-2">
           <CardTitle className="text-center">Kyoto Traditions</CardTitle>

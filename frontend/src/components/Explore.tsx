@@ -10,7 +10,6 @@ interface Experience {
   title: string;
   description: string;
   image: string;
-  // Add other relevant properties like price, duration, location, etc.
 }
 
 const ExploreExperiencesPage = () => {
@@ -23,7 +22,7 @@ const ExploreExperiencesPage = () => {
   useEffect(() => {
     const fetchExperiences = async () => {
       try {
-        const response = await fetch('https://artisanjourneys.onrender.com/api/experiences'); // Adjust URL if needed
+        const response = await fetch('https://artisanjourneys.onrender.com/api/experiences');
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
